@@ -42,23 +42,23 @@ print("[2] Resta (-)")
 print("[3] Multiplicación (*)")
 print("[4] División (/)")
 
-opcion = str(input("\nElige el símbolo de una operación: ")) # se hace casting para recoger el símbolo
+opcion = str(input("\nElige una opción (1-4 o símbolo): "))
+while (opcion not in ['+', '1', '-', '2', '*', '3', '/', '4']): # el bucle se ejecuta mientras la tecla introducida no esté en la lista
+    opcion = str(input("\nNo has introducido una opción. Prueba otra vez (1-4 o símbolo): "))
 
 # Bloque de operaciones: '==' significa que compara el contenido de la variable con un valor
-if (opcion == '+'):
+if (opcion == '+' or opcion == '1'):
     resultado = numero1 + numero2
     print(resultado)
-elif (opcion == '-'): # 'elif' es "sino..."
+elif (opcion == '-' or opcion == '2'): # 'elif' es "sino..."
     resultado = numero1 - numero2
     print(resultado)
-elif (opcion == '*'):
+elif (opcion == '*' or opcion == '3'):
     resultado = numero1 * numero2
     print(resultado)
-elif (opcion == '/'):
+elif (opcion == '/' or opcion == '4'):
     if (numero2 != 0): # '!=' significa "distinto de"
         resultado = numero1 / numero2
         print(resultado)
     else:
         print("Error, estás dividiendo entre 0 y eso no se puede hacer")
-else:
-    print("La opción que has introducido es incorrecta (mendrugo)")
