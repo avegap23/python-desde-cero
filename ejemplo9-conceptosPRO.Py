@@ -1,5 +1,12 @@
 '''
+IMPORTACIÓN DE BIBLIOTECAS DE PYTHON:
+    math: biblioteca de matemáticas completa
+    factorial: es uno de los "módulos" que podemos cargar por independiente
 
+RECURSIVIDAD:
+    1.- se contempla un caso base: cuando se deja de llamar a la función
+    2.- se realiza la llamada recursiva, siempre después del caso base
+    SIN CASO BASE, ¡¡SURPRISE!! TENEMOS UN BUCLE INFINITO
 '''
 
 # Ejemplo factorial: importación de bibliotecas estándar
@@ -26,10 +33,10 @@ def cuenta_patras(numero):
 print(cuenta_patras(10))
 
 # ejemplo del factorial con cafeína: recursividad
-def factorial_1(num):
+def factorial_l(num):
     if num == 1:
         return 1
     
-    return num * factorial_1(num - 1) # cada llamada, es un número menos...
+    return num * factorial_l(num - 1) # cada llamada, es un número menos...
 
-print(factorial_1(10))
+print(factorial_l(10))
